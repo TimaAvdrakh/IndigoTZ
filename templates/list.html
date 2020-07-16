@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YESE</title>
+</head>
+<body>
+<h1>{{user.username}}</h1>
+<table border=1>
+
+
+<tr>
+    {% for i in keys %}
+    <th><a href="{% url 'sorted' i %}">{{i}}</a></th>
+    {% endfor %}
+</tr>
+    {% for employee in employees %}
+<tr>
+    <td> {{employee.rank}}</td>
+    <td> {{employee.name}}</td>
+    <td> {{employee.count}}</td>
+    <td> {{employee.median}}</td>
+    <td> <a href="{% url 'delete' employee.rank %}">delete</a></td>
+
+
+
+
+</tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'add' %}"><h1 style="background-color: powderblue; text-align:center;">ADD</h1></a>
+<a href="{% url 'login' %}"><h1 style="background-color: powderblue; text-align:center;">Login</h1></a>
+<a href="{% url 'logout' %}"><h1 style="background-color: red; text-align:center;">Logout</h1></a>
+<a href="{% url 'download' %}"><h1 style="background-color: green; text-align:center;">Download</h1></a>
+
+</body>
+</html>

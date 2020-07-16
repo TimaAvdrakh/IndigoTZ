@@ -1,0 +1,153 @@
+  
+[
+    {
+        "rank": 1,
+        "employer": "Walmart",
+        "employeesCount": 2300000,
+        "medianSalary": 19177
+    },
+    {
+        "rank": 2,
+        "employer": "Amazon",
+        "employeesCount": 566000,
+        "medianSalary": 38466
+    },
+    {
+        "rank": 3,
+        "employer": "Yum China",
+        "employeesCount": 450000,
+        "medianSalary": 9111
+    },
+    {
+        "rank": 4,
+        "employer": "Kroger",
+        "employeesCount": 449000,
+        "medianSalary": 21075
+    },
+    {
+        "rank": 5,
+        "employer": "Home Depot",
+        "employeesCount": 413000,
+        "medianSalary": 20095
+    },
+    {
+        "rank": 6,
+        "employer": "Berkshire Hathaway",
+        "employeesCount": 377000,
+        "medianSalary": 53510
+    },
+    {
+        "rank": 7,
+        "employer": "International Business Machines",
+        "employeesCount": 366000,
+        "medianSalary": 55088
+    },
+    {
+        "rank": 8,
+        "employer": "FedEx",
+        "employeesCount": 357000,
+        "medianSalary": 50017
+    },
+    {
+        "rank": 9,
+        "employer": "United Parcel Service",
+        "employeesCount": 346415,
+        "medianSalary": 53443
+    },
+    {
+        "rank": 10,
+        "employer": "Target Corporation",
+        "employeesCount": 345000,
+        "medianSalary": 20581
+    },
+    {
+        "rank": 11,
+        "employer": "General Electric",
+        "employeesCount": 313000,
+        "medianSalary": 57211
+    },
+    {
+        "rank": 12,
+        "employer": "Walgreens Boots Alliance",
+        "employeesCount": 290000,
+        "medianSalary": 31132
+    },
+    {
+        "rank": 13,
+        "employer": "Starbucks",
+        "employeesCount": 277000,
+        "medianSalary": 12754
+    },
+    {
+        "rank": 14,
+        "employer": "Albertsons",
+        "employeesCount": 273000,
+        "medianSalary": 31337
+    },
+    {
+        "rank": 15,
+        "employer": "PepsiCo",
+        "employeesCount": 263000,
+        "medianSalary": 47801
+    },
+    {
+        "rank": 16,
+        "employer": "Wells Fargo",
+        "employeesCount": 262700,
+        "medianSalary": 60466
+    },
+    {
+        "rank": 17,
+        "employer": "Cognizant Technology Solutions",
+        "employeesCount": 260000,
+        "medianSalary": 31998
+    },
+    {
+        "rank": 18,
+        "employer": "UnitedHealth Group",
+        "employeesCount": 260000,
+        "medianSalary": 58378
+    },
+    {
+        "rank": 19,
+        "employer": "Lowe's",
+        "employeesCount": 240000,
+        "medianSalary": 23905
+    },
+    {
+        "rank": 20,
+        "employer": "AT&T",
+        "employeesCount": 268540,
+        "medianSalary": 95814
+    },
+    {
+        "rank": 21,
+        "employer": "J.P. Morgan Chase",
+        "employeesCount": 252539,
+        "medianSalary": 77799
+    },
+    {
+        "rank": 22,
+        "employer": "TJX",
+        "employeesCount": 249000,
+        "medianSalary": 11243
+    },
+    {
+        "rank": 23,
+        "employer": "McDonald's",
+        "employeesCount": 235000,
+        "medianSalary": 7017
+    },
+    {
+        "rank": 24,
+        "employer": "HCA Healthcare",
+        "employeesCount": 221491,
+        "medianSalary": 55354
+    },
+    {
+        "rank": 25,
+        "employer": "Aramark",
+        "employeesCount": 215000,
+        "medianSalary": 13373
+    }
+]
