@@ -6,15 +6,16 @@ from django.shortcuts import redirect
 from .forms import EmployeeFrom
 from django.core import serializers
 import logging
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 import json
 from django.http import JsonResponse
 
-
+import pickle
 import redis
-r = redis.Redis()
+r = redis.Redis(host='localhost', port=6379)
 # r.set('employee:deleted', None)
 # r.set('employee:added', None)
+logging.basicConfig(level=logging.DEBUG, filename='actions.log',format='%(asctime)s %(levelname)s:%(message)s')
 
 
 
@@ -29,7 +30,7 @@ def load_data(request):
             count = file['employeesCount']
             median = file['medianSalary']
             employee = Employee(rank=rank, name=employee, count=count, median=median)
-            logger.info("Adding data to model")
+            logging.info("Adding data to model")
             employee.save()
     except:
         return HttpResponse("Rank is already in use")
@@ -48,16 +49,16 @@ def sorted_data(request,to_sort):
     keys = ['Rank', 'Employer',"Count", "MedianSalary"]
     if to_sort == 'Rank':
         employees = Employee.objects.all().order_by('rank')
-        logger.info("Sorted Data by Rank")
+        logging.info("Sorted Data by Rank")
     elif to_sort == 'Employer':
         employees = Employee.objects.all().order_by('name')
-        logger.info("Sorted Data by Rank")
+        logging.info("Sorted Data by Rank")
     elif to_sort == 'Count':
         employees = Employee.objects.all().order_by('-count')
-        logger.info("Sorted Data by Rank")
+        logging.info("Sorted Data by Rank")
     else:
         employees = Employee.objects.all().order_by('-median')
-        logger.info("Sorted Data by Rank")
+        logging.info("Sorted Data by Rank")
 
 
     return render(request,'list.html',context={'employees': employees,'keys': keys})
@@ -67,15 +68,17 @@ def delete_view(request, rank):
     user = request.user
     if not user.is_authenticated:
         return redirect('login')
-    employee = Employee.objects.get(rank=rank)
+    employee = Employee.objects.filter(rank=rank)
+    data = pickle.dumps(employee)
+    # data = serializers.serialize('json', employee)
     key = 'employee:deleted'
-    r.rpush=({key:[employee.rank, employee.name]})
+    r.append(key, data)
+    ans = r.get('employee:deleted')
+    print(pickle.loads(ans))
     employee.delete()
-
-    print(r.get(key))
+    logging.info("Deleted employee")
 
     return redirect('list')
-
 
 def add_view(request):
     context = {}
@@ -86,11 +89,12 @@ def add_view(request):
     key = 'employee:added'
 
     if form.is_valid():
-        print(form.data['rank'])
-        r.rpush = ({key: [form.data['rank'], form.data['name']]})
-
+        data = [form.data['rank'], form.data['name']]
+        r.append(key, pickle.dumps(data))
+        print(r.get(key))
         form.save()
         return redirect('list')
+
 
     context['form'] = form
     return render(request, "add.html", context)
