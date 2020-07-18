@@ -1,2 +1,115 @@
 2020-07-18 05:19:42,635 INFO:Deleted employee
 2020-07-18 05:19:44,077 INFO:Deleted employee
+2020-07-18 05:23:56,538 INFO:Adding data to model
+2020-07-18 05:23:56,551 INFO:Adding data to model
+2020-07-18 05:23:56,561 INFO:Adding data to model
+2020-07-18 05:23:56,570 INFO:Adding data to model
+2020-07-18 05:23:56,578 INFO:Adding data to model
+2020-07-18 05:23:56,587 INFO:Adding data to model
+2020-07-18 05:23:56,596 INFO:Adding data to model
+2020-07-18 05:23:56,605 INFO:Adding data to model
+2020-07-18 05:23:56,613 INFO:Adding data to model
+2020-07-18 05:23:56,621 INFO:Adding data to model
+2020-07-18 05:23:56,630 INFO:Adding data to model
+2020-07-18 05:23:56,639 INFO:Adding data to model
+2020-07-18 05:23:56,648 INFO:Adding data to model
+2020-07-18 05:23:56,656 INFO:Adding data to model
+2020-07-18 05:23:56,665 INFO:Adding data to model
+2020-07-18 05:23:56,673 INFO:Adding data to model
+2020-07-18 05:23:56,682 INFO:Adding data to model
+2020-07-18 05:23:56,692 INFO:Adding data to model
+2020-07-18 05:23:56,701 INFO:Adding data to model
+2020-07-18 05:23:56,709 INFO:Adding data to model
+2020-07-18 05:23:56,717 INFO:Adding data to model
+2020-07-18 05:23:56,726 INFO:Adding data to model
+2020-07-18 05:23:56,735 INFO:Adding data to model
+2020-07-18 05:23:56,744 INFO:Adding data to model
+2020-07-18 05:23:56,753 INFO:Adding data to model
+2020-07-18 05:23:59,410 INFO:Deleted employee
+2020-07-18 05:24:02,781 ERROR:Internal Server Error: /employee/download
+Traceback (most recent call last):
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tima/Desktop/indigoTZ/main/employee/views.py", line 108, in download_data
+    return HttpResponse(outfile, content_type="application/json")
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 292, in __init__
+    self.content = content
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 315, in content
+    content = b''.join(self.make_bytes(chunk) for chunk in value)
+ValueError: I/O operation on closed file.
+2020-07-18 05:24:02,796 ERROR:"GET /employee/download HTTP/1.1" 500 90482
+2020-07-18 05:24:30,387 INFO:Deleted employee
+2020-07-18 05:24:33,647 ERROR:Internal Server Error: /employee/download
+Traceback (most recent call last):
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tima/Desktop/indigoTZ/main/employee/views.py", line 108, in download_data
+    return HttpResponse(outfile, content_type="application/json")
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 292, in __init__
+    self.content = content
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 315, in content
+    content = b''.join(self.make_bytes(chunk) for chunk in value)
+ValueError: I/O operation on closed file.
+2020-07-18 05:24:33,652 ERROR:"GET /employee/download HTTP/1.1" 500 90240
+2020-07-18 05:28:51,620 INFO:Deleted employee
+2020-07-18 05:28:53,944 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:29:36,917 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:31:52,336 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:31:53,365 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:32:01,639 INFO:Adding data to model
+2020-07-18 05:32:01,654 INFO:Adding data to model
+2020-07-18 05:32:01,668 INFO:Adding data to model
+2020-07-18 05:32:01,681 INFO:Adding data to model
+2020-07-18 05:32:01,693 INFO:Adding data to model
+2020-07-18 05:32:01,704 INFO:Adding data to model
+2020-07-18 05:32:01,716 INFO:Adding data to model
+2020-07-18 05:32:01,727 INFO:Adding data to model
+2020-07-18 05:32:01,738 INFO:Adding data to model
+2020-07-18 05:32:01,748 INFO:Adding data to model
+2020-07-18 05:32:01,758 INFO:Adding data to model
+2020-07-18 05:32:01,768 INFO:Adding data to model
+2020-07-18 05:32:01,777 INFO:Adding data to model
+2020-07-18 05:32:01,787 INFO:Adding data to model
+2020-07-18 05:32:01,796 INFO:Adding data to model
+2020-07-18 05:32:01,805 INFO:Adding data to model
+2020-07-18 05:32:01,814 INFO:Adding data to model
+2020-07-18 05:32:01,823 INFO:Adding data to model
+2020-07-18 05:32:01,833 INFO:Adding data to model
+2020-07-18 05:32:01,841 INFO:Adding data to model
+2020-07-18 05:32:01,850 INFO:Adding data to model
+2020-07-18 05:32:01,861 INFO:Adding data to model
+2020-07-18 05:32:01,872 INFO:Adding data to model
+2020-07-18 05:32:01,881 INFO:Adding data to model
+2020-07-18 05:32:01,889 INFO:Adding data to model
+2020-07-18 05:32:04,244 INFO:Deleted employee
+2020-07-18 05:32:06,697 INFO:Deleted employee
+2020-07-18 05:32:08,775 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:47:34,113 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:47:39,427 INFO:Deleted employee
+2020-07-18 05:48:01,720 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:50:14,345 INFO:Deleted employee
+2020-07-18 05:50:16,625 ERROR:"GET /employee/download HTTP/1.1" 500 59
+2020-07-18 05:52:49,998 ERROR:Internal Server Error: /employee/download
+Traceback (most recent call last):
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/tima/Desktop/indigoTZ/main/employee/views.py", line 111, in download_data
+    response = FileResponse(content=data)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 400, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/tima/Desktop/indigoTZ/venv/lib/python3.7/site-packages/django/http/response.py", line 358, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'content'
+2020-07-18 05:52:50,008 ERROR:"GET /employee/download HTTP/1.1" 500 102348

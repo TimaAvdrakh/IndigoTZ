@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Employee
-from django.http import HttpResponse
+from django.http import HttpResponse,FileResponse
 from django.core.serializers import serialize
 from django.shortcuts import redirect
 from .forms import EmployeeFrom
@@ -105,4 +105,9 @@ def download_data(request):
     data = serializers.serialize('json', queryset)
     with open("sample.json", "w") as outfile:
         outfile.write(data)
-    return HttpResponse(json.dumps(data), content_type="application/json",)
+
+    with open("sample.json", 'r') as myfile:
+        data = myfile.read()
+    response = FileResponse(data)
+    response['Content-Type'] = 'application/json'
+    return response
